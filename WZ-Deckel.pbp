@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://www.purebasic.com/namespace" version="1.0" creator="PureBasic 5.62 (Windows - x64)">
+  <section name="config">
+    <options closefiles="1" openmode="0" name="WZL-Deckel"/>
+  </section>
+  <section name="data">
+    <explorer view="..\..\WZ_Liste\" pattern="0"/>
+    <log show="1"/>
+    <lastopen date="2018-10-03 00:10" user="maddin" host="ACER_TABLET"/>
+  </section>
+  <section name="files">
+    <file name="einlesen.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="0493200d0644cef0ebb0fd11fb640653"/>
+    </file>
+    <file name="einlesen_Header.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="5511a0ddd76bb86af55a4e64087aa7bc"/>
+    </file>
+    <file name="einstellungen.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="e8084e0f6467e9f339d234e7b94599c9"/>
+    </file>
+    <file name="einstellungen_header.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="08278721c995b53576d73cd89a755aaf"/>
+    </file>
+    <file name="GUI.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="9985f0caf15e7c44ba9591933e3a9759"/>
+    </file>
+    <file name="GUI_Header.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="5e592aed7eeb703c426d5b98a460c743"/>
+    </file>
+    <file name="main.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="a76d6de0d81036d553fad44f54a887f5"/>
+    </file>
+    <file name="main_Header.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="e27b5d7940ecfa5d16cc049c31656d09"/>
+    </file>
+    <file name="print.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="8c244cd2bbf35713f7a81b53ff7913e4"/>
+    </file>
+    <file name="print_Header.pb">
+      <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
+      <fingerprint md5="90a7f474f698e7a87c8723479f4dca3d"/>
+    </file>
+  </section>
+  <section name="targets">
+    <target name="Standard-Ziel" enabled="1" default="1">
+      <inputfile value="main.pb"/>
+      <outputfile value="main.exe"/>
+      <executable value="C:\Users\Maddi_000\Nextcloud\Heidenhain.exe"/>
+      <options xpskin="1" onerror="1" debug="1"/>
+    </target>
+  </section>
+</project>
