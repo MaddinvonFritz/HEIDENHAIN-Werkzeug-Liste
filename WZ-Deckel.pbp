@@ -7,7 +7,7 @@
   <section name="data">
     <explorer view="..\..\WZ_Liste\" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2018-10-03 00:10" user="maddin" host="ACER_TABLET"/>
+    <lastopen date="2018-10-03 01:01" user="maddin" host="ACER_TABLET"/>
   </section>
   <section name="files">
     <file name="einlesen.pb">
@@ -28,7 +28,7 @@
     </file>
     <file name="GUI.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>
-      <fingerprint md5="9985f0caf15e7c44ba9591933e3a9759"/>
+      <fingerprint md5="20b7d757257a4860c47a3956aa282065"/>
     </file>
     <file name="GUI_Header.pb">
       <config load="0" scan="1" panel="1" warn="1" lastopen="1" panelstate="+"/>

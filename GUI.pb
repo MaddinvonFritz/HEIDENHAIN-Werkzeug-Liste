@@ -7,7 +7,7 @@ XIncludeFile "einstellungen.pb"
 ;GUI Erstellen
 Procedure CreateGUI()
   ;mainwindow
-  OpenWindow(#GUI_WINDOW, 100, 100, 800, 600, "WZ Liste Deckel", #PB_Window_SystemMenu | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget | #PB_Window_SizeGadget | #PB_Window_ScreenCentered)
+  OpenWindow(#GUI_WINDOW, 100, 100, 800, 600, "HEIDENHAIN Werkzeug Liste", #PB_Window_SystemMenu | #PB_Window_MinimizeGadget | #PB_Window_MaximizeGadget | #PB_Window_SizeGadget | #PB_Window_ScreenCentered)
   WindowBounds(#GUI_WINDOW,500, 400, #PB_Default, #PB_Default)
   CreateMenu(#GUI_WINDOW_MENU, WindowID(#GUI_WINDOW))
   MenuTitle("Datei")
@@ -219,7 +219,6 @@ EndProcedure
 
 
 ; IDE Options = PureBasic 5.62 (Windows - x64)
-; CursorPosition = 183
-; FirstLine = 49
-; Folding = 9-+
+; CursorPosition = 9
+; Folding = 0-+
 ; EnableXP
