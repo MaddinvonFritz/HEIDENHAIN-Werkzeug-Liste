@@ -7,7 +7,7 @@
   <section name="data">
     <explorer view="..\..\WZ_Liste\" pattern="0"/>
     <log show="1"/>
-    <lastopen date="2018-10-03 01:01" user="maddin" host="ACER_TABLET"/>
+    <lastopen date="2018-10-03 18:54" user="maddin" host="ACER_TABLET"/>
   </section>
   <section name="files">
     <file name="einlesen.pb">

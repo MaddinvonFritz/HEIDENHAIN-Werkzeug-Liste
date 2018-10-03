@@ -5,7 +5,7 @@ Procedure HOeffnen()
   Protected file.s
   Protected zeilen.i
   
-  file.s = OpenFileRequester(".H Datei öffnen", "", "Heidenhain Datei | *.H; *.h", 0)
+  file.s = OpenFileRequester(".H Datei öffnen", "", "Heidenhain Datei|*.H;*.h", 0)
   If file.s = ""
     Debug "Auswahl abgebrochen"
     ProcedureReturn 0   
@@ -25,7 +25,7 @@ Procedure TOeffnen()
   Protected file.s
   Protected zeilen.i
   
-  file.s = OpenFileRequester(".T Datei öffnen", "", "TOOL Datei | *.T; *.t; *.txt; *.TXT", 0)
+  file.s = OpenFileRequester(".T Datei öffnen", "", "TOOL Datei|*.T;*.t;*.txt;*.TXT", 0)
   If file.s = ""
     Debug "Auswahl abgebrochen"
     ProcedureReturn 0   
@@ -234,7 +234,7 @@ EndProcedure
 
 
 ; IDE Options = PureBasic 5.62 (Windows - x64)
-; CursorPosition = 212
-; FirstLine = 26
-; Folding = Ay
+; CursorPosition = 27
+; FirstLine = 3
+; Folding = Dy
 ; EnableXP
