@@ -208,6 +208,10 @@ Procedure.s GetTWert(Wert.i, Nr.s)
 EndProcedure
 
 Procedure HWerteSortieren()
+  Protected NewList ZwischenSpeicher.komm()
+  Protected *first.komm
+  Protected *zwischenS.komm
+  Protected ztool.s, zkommentar.s
   
   CopyList(Werte(), WerteSortiert())
     
@@ -229,12 +233,65 @@ Procedure HWerteSortieren()
     SortStructuredList(WerteSortiert(), #PB_Sort_Ascending, OffsetOf(komm\idDouble), TypeOf(komm\idDouble))
   EndIf
   
+  If AnsichtDoppelt = #True
+    
+    While ListSize(WerteSortiert()) > 0      
+      *first = FirstElement(WerteSortiert())
+      
+      ;Wenn das Element keinem Werkzeug zugeordnet ist wird es einfach kopiert.
+      If WerteSortiert()\tool = ""
+        *zwischenS = AddElement(ZwischenSpeicher())
+        *zwischenS\tool = *first\tool
+        *zwischenS\id = *first\id
+        *zwischenS\idDouble = *first\idDouble
+        *zwischenS\komm = *first\komm
+        
+        DeleteElement(WerteSortiert())
+      ; Das Element wird kopiert und nach weiteren Einträgen mit dieser Werkzeugnummer gesucht.
+      Else
+        ztool.s = *first\tool; Das zu suchende Werkzeug
+        zkommentar.s = *first\komm
+        *zwischenS = AddElement(ZwischenSpeicher())
+        *zwischenS\tool = *first\tool
+        *zwischenS\id = *first\id
+        *zwischenS\idDouble = *first\idDouble
+        *zwischenS\komm = *first\komm
+        
+        DeleteElement(WerteSortiert(), 1)
+        
+        ForEach WerteSortiert()
+          If ztool = WerteSortiert()\tool; Dem Eintrag ist ein Werkzeug zugeordnet
+            If LCase(*zwischenS\komm) = LCase(zkommentar.s)
+              DeleteElement(WerteSortiert())
+            Else
+              *zwischenS\komm = *zwischenS\komm + " ; " + WerteSortiert()\komm
+              DeleteElement(WerteSortiert())
+            EndIf
+            
+          ElseIf ztool = WerteSortiert()\id; einfacher Kommentar
+            AddElement(ZwischenSpeicher())
+            ZwischenSpeicher()\tool = WerteSortiert()\tool
+            ZwischenSpeicher()\id = WerteSortiert()\id
+            ZwischenSpeicher()\idDouble = WerteSortiert()\idDouble
+            ZwischenSpeicher()\komm = WerteSortiert()\komm
+        
+            DeleteElement(WerteSortiert(), 1)
+          EndIf
+          
+        Next
+        
+      EndIf
+      
+    Wend
+    CopyList(ZwischenSpeicher(), WerteSortiert())
+  EndIf
+  
 EndProcedure
 
 
 
 ; IDE Options = PureBasic 5.62 (Windows - x64)
-; CursorPosition = 27
-; FirstLine = 3
-; Folding = Dy
+; CursorPosition = 270
+; FirstLine = 181
+; Folding = z4
 ; EnableXP

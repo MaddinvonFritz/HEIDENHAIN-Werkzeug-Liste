@@ -28,7 +28,7 @@ Procedure CreateGUI()
   SetMenuItemState(#GUI_WINDOW_MENU, #AnsichtSortieren, AnsichtSortieren)
   
   ;AnsichtDoppelt Deaktivieren da noch nicht implementiert
-  DisableMenuItem(#GUI_WINDOW_MENU, #AnsichtDoppelt, #True)
+  ;DisableMenuItem(#GUI_WINDOW_MENU, #AnsichtDoppelt, #True)
   
   MenuTitle("Drucken")
   MenuItem(#PrintPrint, "Drucken")
@@ -219,6 +219,7 @@ EndProcedure
 
 
 ; IDE Options = PureBasic 5.62 (Windows - x64)
-; CursorPosition = 9
+; CursorPosition = 30
+; FirstLine = 12
 ; Folding = 0-+
 ; EnableXP

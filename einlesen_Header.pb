@@ -7,10 +7,10 @@
 EndEnumeration
 
 Structure komm
-  tool.s
-  id.s
-  idDouble.d
-  komm.s
+  tool.s ; Werkzeugnummer
+  id.s ; Die Letzte Werkzeugnummer die gefunden wurden ist.
+  idDouble.d ; Werkzeugnummer für die sort Routine.
+  komm.s ; Kommentar
 EndStructure
 Global NewList Werte.komm()
 Global NewList WerteSortiert.komm()
@@ -43,5 +43,6 @@ Declare AddTool(tool.s)
 Declare.s GetTWerT(Wert.i, Nr.s)
 Declare HWerteSortieren()
 ; IDE Options = PureBasic 5.62 (Windows - x64)
-; CursorPosition = 5
+; CursorPosition = 11
+; FirstLine = 1
 ; EnableXP
